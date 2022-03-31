@@ -822,6 +822,27 @@ font: bold;</string>
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SEU IMC&lt;span style=&quot; font-size:11pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
+      <widget class="QLabel" name="label_imc">
+       <property name="geometry">
+        <rect>
+         <x>126</x>
+         <y>687</y>
+         <width>71</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #ff5202;
+color: #FFF;
+font-size: 16pt;
+font-family: Arial;
+font-weight: 700;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </widget>
     </item>
    </layout>

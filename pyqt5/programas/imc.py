@@ -28,13 +28,15 @@ def indice():
 
     calculo_imc = round(calculo_imc, 2)
     calc = str(calculo_imc)
-    massa.label_seuimc.setText("SEU IMC: \n" + calc)
-    massa.pb_limpar.clicked.connect(massa.label_seuimc.clear)
+    massa.label_imc.setText(calc)
+    
+    massa.pb_limpar.clicked.connect(massa.label_imc.clear)
+    
+    #Lógica incompleta para apagar background verde-claro
     
     #massa.widget_sobrepeso.setStyleSheet('background-color: transparent; border-bottom: 3px solid #e7eaee;')
-    
-    #if massa.pb_limpar.clicked and grau == 1:
-    #    massa.widget_sobrepeso.setStyleSheet('background-color: transparent; border-bottom: #e7eaee;')
+
+
 
 app = QtWidgets.QApplication([])
 massa = uic.loadUi("gui_imc.ui")
