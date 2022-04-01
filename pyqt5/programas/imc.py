@@ -1,8 +1,4 @@
-import sys
 import math
-from PyQt5.QtWidgets import * 
-from PyQt5 import QtCore
-from PyQt5.QtGui import * 
 from PyQt5 import uic, QtWidgets
 
 def indice():
@@ -31,16 +27,23 @@ def indice():
     massa.label_imc.setText(calc)
     
     massa.pb_limpar.clicked.connect(massa.label_imc.clear)
+    massa.pb_limpar.clicked.connect(massa.lineEdit_altura.clear)
+    massa.pb_limpar.clicked.connect(massa.lineEdit_peso.clear)
     
-    #Lógica incompleta para apagar background verde-claro
     
-    #massa.widget_sobrepeso.setStyleSheet('background-color: transparent; border-bottom: 3px solid #e7eaee;')
+def limpar():
+    massa.widget_magreza.setStyleSheet('background-color: transparent; border-bottom: 3px solid #e7eaee;')
+    massa.widget_normal.setStyleSheet('background-color: transparent; border-bottom: 3px solid #e7eaee;')
+    massa.widget_sobrepeso.setStyleSheet('background-color: transparent; border-bottom: 3px solid #e7eaee;')
+    massa.widget_obesidade.setStyleSheet('background-color: transparent; border-bottom: 3px solid #e7eaee;')
+    massa.widget_obesidade_grave.setStyleSheet('background-color: transparent; border-bottom: 3px solid #e7eaee;')
+
 
 
 
 app = QtWidgets.QApplication([])
 massa = uic.loadUi("gui_imc.ui")
 massa.pb_calcular.clicked.connect(indice)
-massa.pb_limpar.clicked.connect(indice)
+massa.pb_limpar.clicked.connect(limpar)
 massa.show()
 app.exec()
