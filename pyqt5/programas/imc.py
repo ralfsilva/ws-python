@@ -39,8 +39,6 @@ def limpar():
     massa.widget_obesidade_grave.setStyleSheet('background-color: transparent; border-bottom: 3px solid #e7eaee;')
 
 
-
-
 app = QtWidgets.QApplication([])
 massa = uic.loadUi("gui_imc.ui")
 massa.pb_calcular.clicked.connect(indice)
