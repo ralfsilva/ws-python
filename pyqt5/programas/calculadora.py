@@ -1,25 +1,26 @@
 from PyQt5 import uic, QtWidgets
 
 def calc():
-    num1 = int(calculadora.lineEdit_num1.text())
-    num2 = int(calculadora.lineEdit_num2.text())
+    num1 = int(cal.lineEdit_num1.text())
+    num2 = int(cal.lineEdit_num2.text())
 
-    operacao = input("Digite qual operação vai ser feita: ")
+    operacao = cal.lineEdit_operacao.text()
 
-    if operacao == calculadora.lineEdit_operacao.text('+'):
-        print (num1 + num2)
+    if operacao == '+':
+        print ("Soma entre {} e {}: {}".format(num1, num2 (num1 + num2)))
 
     elif operacao == '-':
-        print (num1 - num2)
+        print ("Subtração entre {} e {}: {}".format(num1, num2, (num1 - num2)))
 
     elif operacao == '*':
-        print (num1 * num2)
+        print ("Multiplicação entre {} e {}: {}".format(num1, num2, (num1 * num2)))
 
     elif operacao == '/':
-        print (num1 / num2)
+
+        print ("Divisão entre {} e {}: {}".format(num1, num2, float(num1 / num2)))
 
 app = QtWidgets.QApplication([])
-calculadora = uic.loadUi("calculadora.ui")
-calculadora.pb_calcular.clicked.connect(calc)
-calculadora.show()
+cal = uic.loadUi("calculadora.ui")
+cal.pb_calcular.clicked.connect(calc)
+cal.show()
 app.exec()
